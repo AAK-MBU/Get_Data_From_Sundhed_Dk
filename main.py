@@ -121,11 +121,3 @@ def get_dentists(municipality_id: str, category: str) -> dict:
     fetch_additional_search_data(session, referer)
     data = search_dentists(session, municipality_id, category)
     return data
-
-
-if __name__ == '__main__':
-    result = get_dentists(
-        municipality_id='751',
-        category='Tandlæge'
-    )
-    print(json.dumps(result, indent=2, ensure_ascii=False))
